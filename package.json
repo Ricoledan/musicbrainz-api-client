@@ -1,0 +1,39 @@
+{
+  "name": "musicbrainz-api-client",
+  "version": "0.0.0-development",
+  "description": "🎵 JavaScript Client for accessing musicbrainz api",
+  "main": "src/index.ts",
+  "scripts": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+    "lint": "",
+    "semantic-release": "semantic-release",
+    "test": "npx jest test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ricoledan/musicbrainz-api-client.git"
+  },
+  "keywords": [
+    "musicbrainz",
+    "musicbrainz",
+    "api",
+    "client",
+    "api",
+    "client"
+  ],
+  "author": "Ricardo Ledan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ricoledan/musicbrainz-api-client/issues"
+  },
+  "homepage": "https://github.com/Ricoledan/musicbrainz-api-client#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@semantic-release/changelog": "^5.0.1",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.1.1",
+    "typescript": "^3.9.7"
+  }
+}
