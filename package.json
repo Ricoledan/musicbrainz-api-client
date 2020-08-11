@@ -2,8 +2,10 @@
   "name": "musicbrainz-api-client",
   "version": "0.0.0-development",
   "description": "🎵 JavaScript Client for accessing musicbrainz api",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
+    "build": "npx rollup -c",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "lint": "",
     "semantic-release": "semantic-release",
@@ -36,6 +38,9 @@
     "husky": "^4.2.5",
     "jest": "^26.3.0",
     "prettier": "^2.0.5",
+    "rollup": "^2.23.1",
+    "rollup-plugin-filesize": "^9.0.2",
+    "rollup-plugin-typescript2": "^0.27.2",
     "semantic-release": "^17.1.1",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
