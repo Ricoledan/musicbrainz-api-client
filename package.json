@@ -7,7 +7,8 @@
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "lint": "",
     "semantic-release": "semantic-release",
-    "test": "npx jest test/"
+    "test": "jest",
+    "test:watch": "npm t -- --watch"
   },
   "repository": {
     "type": "git",
@@ -31,9 +32,12 @@
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "@semantic-release/changelog": "^5.0.1",
+    "@types/jest": "^26.0.9",
     "husky": "^4.2.5",
+    "jest": "^26.3.0",
     "prettier": "^2.0.5",
     "semantic-release": "^17.1.1",
+    "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   }
 }
