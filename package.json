@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "scripts": {
-    "build": "npx rollup -c",
+    "build": "rm -rf dist && npx rollup -c",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+    "dev": "npm run build && node dist/index.js",
     "lint": "",
     "semantic-release": "semantic-release",
     "test": "jest",
@@ -18,9 +19,7 @@
   },
   "keywords": [
     "musicbrainz",
-    "musicbrainz",
-    "api",
-    "client",
+    "api client",
     "api",
     "client"
   ],
@@ -44,5 +43,8 @@
     "semantic-release": "^17.1.1",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }
