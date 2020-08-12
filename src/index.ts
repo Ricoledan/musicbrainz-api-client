@@ -1,12 +1,12 @@
 const axios = require('axios')
-import { ArtistId } from './types'
+import { ArtistId, RecordingInfo } from './types'
 
 const HTTPClient = axios.create({
   method: 'GET',
   baseURL: 'http://musicbrainz.org/ws/2/',
 })
 
-const getArtistId = (name: string) => {
+const getArtistInfo = (name: string) => {
   const formatName = encodeURIComponent(name).toLowerCase()
   HTTPClient({
     url: `/artist/`,
@@ -43,4 +43,33 @@ const getArtistId = (name: string) => {
   }
 }
 
-export { getArtistId }
+const getArtistRecordingDetails = (id: string) => {
+  HTTPClient({
+    url: `/artist/${id}?inc=works%20releases%20release-groups%20recordings`,
+    params: {
+      fmt: 'json',
+    },
+  })
+    .then(
+      (response: any): RecordingInfo => ({
+        all_recordings: formatArray(response.data.recordings),
+        all_albums: formatArray(response.data['release-groups']),
+      })
+    )
+    .catch((error: any) => {
+      return error.response
+    })
+
+  function formatArray(response: any) {
+    let i,
+      arr: any = []
+    for (i = 0; i < response.length; i++) {
+      if (!arr.includes(response[i].title)) {
+        arr.push(response[i].title)
+      }
+    }
+    return arr
+  }
+}
+
+export { getArtistInfo, getArtistRecordingDetails }

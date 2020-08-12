@@ -11,4 +11,9 @@ interface ArtistId {
   tags: String[]
 }
 
-export { ArtistId }
+interface RecordingInfo {
+  all_recordings: String[]
+  all_albums: String[]
+}
+
+export { ArtistId, RecordingInfo }

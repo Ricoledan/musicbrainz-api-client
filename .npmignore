@@ -1,0 +1,7 @@
+node_modules/**
+
+src/**
+test/**
+
+commitlint.config.js
+*.test.js
