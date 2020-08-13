@@ -5,3 +5,13 @@ test/**
 
 commitlint.config.js
 *.test.js
+
+.eslintignore
+.eslintrc
+.github/
+
+.huskyrc.js
+jest.config.js
+prettier.config.js
+rollup.config.js
+release.config.js
