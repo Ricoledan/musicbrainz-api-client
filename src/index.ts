@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 import { ArtistId, RecordingInfo } from './types'
 
 const HTTPClient = axios.create({
@@ -34,8 +34,8 @@ const getArtistInfo = (name: string) => {
     })
 
   function formatArray(response: any) {
-    let i,
-      arr = []
+    let i: number
+    const arr = []
     for (i = 0; i < response.length; i++) {
       arr.push(response[i].name)
     }
@@ -61,8 +61,8 @@ const getArtistRecordingDetails = (id: string) => {
     })
 
   function formatArray(response: any) {
-    let i,
-      arr: any = []
+    let i: number
+    const arr: any = []
     for (i = 0; i < response.length; i++) {
       if (!arr.includes(response[i].title)) {
         arr.push(response[i].title)

@@ -1,19 +1,19 @@
 interface ArtistId {
-  id: String
-  name: String
-  gender: String
+  id: string
+  name: string
+  gender: string
   lifespan: {
-    born: String
-    death: String | null
+    born: string
+    death: string | null
   }
-  country: String
-  aliases: String[]
-  tags: String[]
+  country: string
+  aliases: string[]
+  tags: string[]
 }
 
 interface RecordingInfo {
-  all_recordings: String[]
-  all_albums: String[]
+  all_recordings: string[]
+  all_albums: string[]
 }
 
 export { ArtistId, RecordingInfo }
